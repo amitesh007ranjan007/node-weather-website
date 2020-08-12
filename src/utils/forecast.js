@@ -10,7 +10,9 @@ const forecast = (x, y, callback) => {
         } else if(error) {
             callback('Wrong user input', undefined)
         } else {
-            const result = `It is currently ${current.temperature} celsius out. But the temperature feels like ${current.feelslike} celsius.`
+            const result = `It is currently ${current.temperature} celsius out. But the temperature feels like ${current.feelslike} celsius.
+            The wind speed is ${current.wind_speed} and humidity is ${current.humidity}`
+            
             callback(undefined, result )
         }
     })
