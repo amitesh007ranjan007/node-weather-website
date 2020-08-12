@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express() // Express has created express application
+const port = process.env.PORT || 3000 // for local use 3000
 const staticPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -89,6 +90,6 @@ app.get('*', (req, res) => { //Do
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000')
+app.listen(port, () => {
+    console.log('Server is running on port' +port)
 }) //Server started and is listening is at port 3000

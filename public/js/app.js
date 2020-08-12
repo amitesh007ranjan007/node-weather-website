@@ -6,7 +6,7 @@ const messageTwo = document.getElementById('message-2')
 const weatherFinder = (addr) => {
     messageOne.textContent = 'loading....'
     messageTwo.textContent = ''
-    fetch(`http://localhost:3000/weather?address=${addr}`)
+    fetch(`/weather?address=${addr}`)
 .then((response) => {
     response.json()
     .then((data) => {
